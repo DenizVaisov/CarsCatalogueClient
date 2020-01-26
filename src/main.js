@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 
 Axios.defaults.baseURL = process.env.API_ENDPOINT
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
 new Vue({

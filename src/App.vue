@@ -2,7 +2,7 @@
    <b-container fluid id="app">
     <b-row>
       <b-col>
-        <navbar/>
+        <!-- <navbar/> -->
       </b-col>
     </b-row>
     <b-row>
@@ -15,10 +15,11 @@
 
 <script>
 import Navbar from '@/components/Navbar'
+import Loader from '@/components/Loader'
 export default {
   name: 'App',
   components: {
-    Navbar
+    // Navbar
   }
 }
 </script>
@@ -29,6 +30,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  font: 1.3rem "YS Text",sans-serif;
+  color: #2b2b2b;
 }
 </style>
