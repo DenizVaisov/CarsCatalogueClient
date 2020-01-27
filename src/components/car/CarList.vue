@@ -3,7 +3,10 @@
   <b-container>
     <b-row>
       <b-col md="2" offset-md="10" class="mt-2 mb-2">
-          <router-link  :to="{ name: 'CarCreate' }">Добавить авто</router-link>
+        <b-button :to="{ name: 'CarCreate' }" pill variant="primary">
+          Добавить авто
+        </b-button>
+          <!-- <router-link  :to="{ name: 'CarCreate' }">Добавить авто</router-link> -->
       </b-col>
     </b-row>
     <b-row>
@@ -23,7 +26,7 @@
           @update="updateCar"
           @details="detailsCar"
           @delete="deleteCar" />
-          <loader/>
+        <loader/>
     </b-row>
     <b-row>
       <b-col>

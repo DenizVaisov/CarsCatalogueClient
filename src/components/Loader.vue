@@ -42,7 +42,7 @@
                 console.log('User cancelled the loader.')
             }
         },
-        created: function(){
+        beforeCreate: function(){
             this.isLoading = true;
             // Simulate async call
             setTimeout(() => {

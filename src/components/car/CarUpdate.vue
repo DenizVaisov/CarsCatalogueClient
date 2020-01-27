@@ -123,7 +123,7 @@
                 </b-col>
               </b-row>
             </b-col>
-            <b-col
+            <b-col class="mb-4"
                 :md="5"
                 offset="4">
                 <b-button
@@ -198,13 +198,12 @@ export default {
       this.formData.image = response.data.image
       this.formData.video = response.data.video
       this.formData.description = response.data.description
-      console.log(typeof(this.formData.cost), typeof(this.formData.capacity), typeof(this.formData.speed))
     });
   },
   methods: {
     updateCar() {
       CarService.update(this.$router.currentRoute.params.id, this.formData).then(() => {
-        console.log(this.$router.currentRoute.params.id, this.formData)
+        // console.log(this.$router.currentRoute.params.id, this.formData)
         this.isSuccessfully = true
         this.alertModalTitle = 'Успешно!'
         this.alertModalContent = 'Это авто успешно обновлено в каталоге'

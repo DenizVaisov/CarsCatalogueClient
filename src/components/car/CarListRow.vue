@@ -41,6 +41,6 @@ export default {
 <style scoped>
 .img-fluid {
     max-width: 100%;
-    height: 250px;
+    height: 150px;
 }
 </style>

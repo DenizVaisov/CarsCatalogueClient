@@ -7,7 +7,6 @@
           <h1>{{ car.title }} {{car.model}}</h1>
         </b-col>
       </b-row>
-      
       <b-row>
         <b-col offset-md="2" md="8">
             <!-- <b-img :src="car.image" fluid alt="Fluid image"></b-img> -->
@@ -31,21 +30,9 @@
                         width="1368"
                         height="380"
                         :src="car.image"
-                        alt="image slot"
                     >
                     </template>
                 </b-carousel-slide>
-                <!-- <b-carousel-slide>
-                    <template v-slot:img>
-                        <img
-                            class="d-block img-fluid w-100"
-                            width="1024"
-                            height="380"
-                            src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC90BMS191A021002.jpg"
-                            alt="image slot"
-                        >
-                    </template>
-                </b-carousel-slide> -->
             </b-carousel>
         </b-col>
       </b-row>
@@ -109,9 +96,11 @@
 
 <script>
 import CarService from '@/api-services/car.service'
+import Loader from '@/components/Loader'
 export default {
   name: 'CarDetails',
   components: {
+    Loader
   },
 
   data() {
@@ -132,7 +121,6 @@ export default {
   created() {
     CarService.get(this.$router.currentRoute.params.id).then((response) => {
       this.car = response.data
-      console.log(this.car)
       })
     }
   }
@@ -158,6 +146,5 @@ export default {
     opacity: .5;
     -webkit-transition: opacity 0.6s ease;
     transition: opacity 0.6s ease;
-    /* color: blue; */
 }
 </style>
